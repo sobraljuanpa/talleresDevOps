@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "hashicorp/bionic64"
     config.vm.provision "shell", inline: <<-SHELL
       apt-get install -y ansible
-      git clone https://github.com/sobraljuanpa/tallerJenkins.git
+      git clone https://github.com/sobraljuanpa/talleresDevOps.git
       cd tallerJenkins
       ansible-playbook configureCICDServer.yml --extra-vars "ansible_become_pass=vagrant"
     SHELL

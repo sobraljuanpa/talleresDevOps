@@ -3,7 +3,7 @@ node {
     properties([pipelineTriggers([pollSCM('* * * * *')])])
     
     stage('Pull changes'){
-            git url: 'https://github.com/sobraljuanpa/tallerJenkins.git', credentialsId: 'github'
+            git url: 'https://github.com/sobraljuanpa/talleresDevOps.git', credentialsId: 'github'
         }
     
         stage('Setup environment'){
