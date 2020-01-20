@@ -1,0 +1,28 @@
+---
+    execution:
+      concurrency: 10
+      hold-for: 1m
+      scenario: Thread Group
+
+    scenarios:
+      Thread Group:
+        requests:
+        - label: HomePage
+          method: GET
+          url: http://127.0.0.1:7000/catalog/
+
+        - label: BooksPage
+          method: GET
+          url: http://127.0.0.1:7000/catalog/books/
+
+        - label: AuthorsPage
+          method: GET
+          url: http://127.0.0.1:7000/catalog/authors/
+
+    reporting:
+    - module: passfail
+      criteria: 
+      - fail > 0%
+      - avg-rt > 1s
+    - module: final-stats
+      dump-xml: taurusResults.xml

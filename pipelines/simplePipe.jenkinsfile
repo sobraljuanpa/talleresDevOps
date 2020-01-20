@@ -1,0 +1,21 @@
+node {
+
+    properties([pipelineTriggers([pollSCM('* * * * *')])])
+
+    stage('Clone repository contents'){
+        git url: 'https://github.com/sobraljuanpa/tallerJenkins.git', credentialsId: 'github'
+    }
+    
+    stage('Build code using maven'){
+        sh 'mvn clean compile'
+    }
+
+    stage('Test code using maven'){
+        sh 'mvn clean test'
+    }
+
+    stage('Analyze test results'){
+        junit 'target/surefire-reports/*.xml'
+    }
+
+}
