@@ -3,6 +3,7 @@
 + Para levantar todo ```vagrant up```
 + Para acceder a la vm ```vagrant ssh```
 + Para recargar la config la config si la modifico ```vagrant reload```
++ Para re ejecutar el provisioning (Ejemplo cambio el script) ```vagrant provision```
 + Para apagar la vm ```vagrant halt```
 + Para destruir la vm ```vagrant destroy```
 
