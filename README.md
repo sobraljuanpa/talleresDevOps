@@ -2,7 +2,9 @@
 
 ## Prerequisitos
 
-1. En caso de tener HyperV habilitado, ir a Turn Windows Features On or Off y deshabilitar HyperV porque va a generar conflictos. Nos va a pedir reiniciar la máquina y luego del reinicio hay que ejecutar el siguiente comando en una consola de CMD o Powershell como administrador ```bcdedit /set hypervisorlaunchtype off```.
+1. En caso de tener HyperV habilitado, ir a Turn Windows Features On or Off y deshabilitar HyperV porque va a generar conflictos. 
+
+    Nos va a pedir reiniciar la máquina y luego del reinicio hay que ejecutar el siguiente comando en una consola de CMD o Powershell como administrador ```bcdedit /set hypervisorlaunchtype off```.
 
     Luego reiniciar la máquina y estamos prontos para seguir.
 
@@ -24,7 +26,7 @@
 
 3. Preinstalación de una box
 
-    Vagrant trabaja con "boxes", las cuales son simplemente una imagen básica y liviana de un SO la cual clona a la hora de crear una VM. Si nosotros llevamos instalada previamente la box al taller, no tenemos que descargarla cuando la referenciemos desde un Vagrantfile, lo cual nos va a agilizar bastante los procesos para que la demo no sean 20 minutos de descargas.
+    Vagrant trabaja con "boxes", las cuales son simplemente una imagen básica y liviana de un SO la cual clona a la hora de crear una VM. Si nosotros llevamos instalada previamente la box al taller, no tenemos que descargarla cuando la referenciemos desde un Vagrantfile, lo cual nos va a agilizar bastante los procesos para que la demo no sea una hora de ver como se descarga la box.
 
     Una vez instalado Vagrant, vamos a ejecutar el siguiente comando:
 
@@ -47,3 +49,15 @@
     ![](/recursosMD/capturaVagrantUp.PNG)
 
     Pueden probar ejecutar el comando ```vagrant ssh``` que nos debería abrir una sesión de consola vía ssh en nuestra VM. Para salir simplemente ejecutamos el comando ```exit```. También van a poder ver en VirtualBox que efectivamente hay una nueva VM creada.
+
+
+## Comandos utiles de vagrant
+
+Les recomiendo que prueben estos comandos para irse familiarizando un poco con la herramienta.
+
++ Para levantar todo ```vagrant up```
++ Para acceder a la vm ```vagrant ssh```
++ Para recargar la config la config si la modifico ```vagrant reload```
++ Para re ejecutar el provisioning (Ejemplo cambio el playbook) ```vagrant provision```
++ Para apagar la vm ```vagrant halt```
++ Para destruir la vm ```vagrant destroy```
