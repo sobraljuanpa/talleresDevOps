@@ -1,0 +1,16 @@
+$ mkdir taller
+$ cd taller
+$ vagrant init
+Abro vagrantfile que se encuentra en el directorio taller, borro contenidos y pego los del vagrantfile
+del repo
+$ vagrant up
+
+
+----------------------------------------------------
+Para el ejercicio
+
+pip3 install -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py collectstatic
+python3 manage.py runserver

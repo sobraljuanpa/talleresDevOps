@@ -50,6 +50,20 @@
 
     Pueden probar ejecutar el comando ```vagrant ssh``` que nos debería abrir una sesión de consola vía ssh en nuestra VM. Para salir simplemente ejecutamos el comando ```exit```. También van a poder ver en VirtualBox que efectivamente hay una nueva VM creada.
 
+5. Preinstalacion de la box que vamos a usar en el taller
+
+    Para no saturar el enlace de la oficina descargando todos un monton de cosas durante el taller, les voy a pedir que traigan ya pronta la VM que vamos a usar en el mismo. Los comandos que necesitan ejecutar son los siguientes:
+
+    ``` pwsh
+    $ mkdir taller
+    $ cd taller
+    $ vagrant init
+    ```
+    Abro vagrantfile que se encuentra en el directorio taller, borro contenidos y pego los del vagrantfile del repo
+    ```pwsh
+    $ vagrant up
+    ```
+
 
 ## Comandos utiles de vagrant
 
