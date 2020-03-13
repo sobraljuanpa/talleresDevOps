@@ -59,7 +59,8 @@
     $ cd taller
     $ vagrant init
     ```
-    Abro vagrantfile que se encuentra en el directorio taller, borro contenidos y pego los del vagrantfile del repo
+    Abro vagrantfile que se encuentra en el directorio taller, borro contenidos y pego los del vagrantfile del repo. Luego ejecutamos el siguiente comando:
+    
     ```pwsh
     $ vagrant up
     ```
