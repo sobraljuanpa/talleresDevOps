@@ -21,7 +21,7 @@
     
         - name: Add Jenkins apt repository
           apt_repository:
-            repo: deb http://pkg.jenkins-ci.org/debian binary/
+            repo: deb http://pkg.jenkins-ci.org/debian-stable binary/
             state: present
     
         - name: Update repositories cache and install Jenkins
